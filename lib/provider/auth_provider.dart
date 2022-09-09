@@ -23,6 +23,13 @@ final routerProvider = Provider<GoRouter>(
           path: '/state-provider',
           name: StateProviderScreen.routeName,
           builder: (context, state) => StateProviderScreen(),
+          routes: [
+            GoRoute(
+              path: 'next',
+              name: NextScreen.routeName,
+              builder: (context, state) => NextScreen(),
+            ),
+          ],
         ),
       ],
     );
