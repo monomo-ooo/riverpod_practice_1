@@ -6,6 +6,7 @@ import 'package:riverpod_practice_1/screen/error_screen.dart';
 import 'package:riverpod_practice_1/screen/family_modifier_screen.dart';
 import 'package:riverpod_practice_1/screen/future_provider_screen.dart';
 import 'package:riverpod_practice_1/screen/home_screen.dart';
+import 'package:riverpod_practice_1/screen/listen_provider_screen.dart';
 import 'package:riverpod_practice_1/screen/state_notifier_provider_screen.dart';
 import 'package:riverpod_practice_1/screen/state_provider_screen.dart';
 import 'package:riverpod_practice_1/screen/stream_provider_screen.dart';
@@ -60,6 +61,11 @@ final routerProvider = Provider<GoRouter>(
               path: 'auto-dispose-modifier',
               name: AutoDisposeModifierScreen.routeName,
               builder: (context, state) => AutoDisposeModifierScreen(),
+            ),
+            GoRoute(
+              path: 'listen-provider',
+              name: ListenProviderScreen.routeName,
+              builder: (context, state) => ListenProviderScreen(),
             ),
           ],
         ),
