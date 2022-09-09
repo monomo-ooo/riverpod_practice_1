@@ -5,13 +5,13 @@ import 'package:riverpod_practice_1/layout/default_layout.dart';
 import 'package:riverpod_practice_1/provider/state_provider.dart';
 
 class StateProviderScreen extends ConsumerWidget {
-  static String get routeName => '/state-provider';
+  static String get routeName => 'state-provider';
 
   const StateProviderScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final provider = ref.watch(numberProvider);
+    final state = ref.watch(numberProvider);
 
     return DefaultLayout(
       title: 'StateProviderScreen',
@@ -21,7 +21,7 @@ class StateProviderScreen extends ConsumerWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              provider.toString(),
+              state.toString(),
               style: TextStyle(fontSize: 24),
             ),
             SizedBox(height: 16),

@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_practice_1/screen/error_screen.dart';
+import 'package:riverpod_practice_1/screen/future_provider_screen.dart';
 import 'package:riverpod_practice_1/screen/home_screen.dart';
+import 'package:riverpod_practice_1/screen/state_notifier_provider_screen.dart';
 import 'package:riverpod_practice_1/screen/state_provider_screen.dart';
 
 final routerProvider = Provider<GoRouter>(
@@ -18,16 +20,28 @@ final routerProvider = Provider<GoRouter>(
           path: '/',
           name: HomeScreen.routeName,
           builder: (context, state) => HomeScreen(),
-        ),
-        GoRoute(
-          path: '/state-provider',
-          name: StateProviderScreen.routeName,
-          builder: (context, state) => StateProviderScreen(),
           routes: [
             GoRoute(
-              path: 'next',
-              name: NextScreen.routeName,
-              builder: (context, state) => NextScreen(),
+              path: 'state-provider',
+              name: StateProviderScreen.routeName,
+              builder: (context, state) => StateProviderScreen(),
+              routes: [
+                GoRoute(
+                  path: 'next',
+                  name: NextScreen.routeName,
+                  builder: (context, state) => NextScreen(),
+                ),
+              ],
+            ),
+            GoRoute(
+              path: 'state-notifier-provider',
+              name: StateNotifierProviderScreen.routeName,
+              builder: (context, state) => StateNotifierProviderScreen(),
+            ),
+            GoRoute(
+              path: 'future-provider',
+              name: FutureProviderScreen.routeName,
+              builder: (context, state) => FutureProviderScreen(),
             ),
           ],
         ),

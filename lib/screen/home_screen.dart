@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_practice_1/layout/default_layout.dart';
+import 'package:riverpod_practice_1/screen/future_provider_screen.dart';
+import 'package:riverpod_practice_1/screen/state_notifier_provider_screen.dart';
 import 'package:riverpod_practice_1/screen/state_provider_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -17,6 +19,17 @@ class HomeScreen extends StatelessWidget {
           ElevatedButton(
             onPressed: () => context.goNamed(StateProviderScreen.routeName),
             child: Text('StateProviderScreen'),
+          ),
+          SizedBox(height: 16),
+          ElevatedButton(
+            onPressed: () =>
+                context.goNamed(StateNotifierProviderScreen.routeName),
+            child: Text('StateNotifierProviderScreen'),
+          ),
+          SizedBox(height: 16),
+          ElevatedButton(
+            onPressed: () => context.goNamed(FutureProviderScreen.routeName),
+            child: Text('FutureProviderScreen'),
           ),
         ],
       ),

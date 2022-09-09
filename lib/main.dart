@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_practice_1/provider/auth_provider.dart';
 
 void main() {
-  runApp(ProviderScope(child: App()));
+  runApp(const ProviderScope(child: App()));
 }
 
 class App extends ConsumerWidget {
