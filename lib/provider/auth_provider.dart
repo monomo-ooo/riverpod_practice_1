@@ -6,6 +6,7 @@ import 'package:riverpod_practice_1/screen/future_provider_screen.dart';
 import 'package:riverpod_practice_1/screen/home_screen.dart';
 import 'package:riverpod_practice_1/screen/state_notifier_provider_screen.dart';
 import 'package:riverpod_practice_1/screen/state_provider_screen.dart';
+import 'package:riverpod_practice_1/screen/stream_provider_screen.dart';
 
 final routerProvider = Provider<GoRouter>(
   (ref) {
@@ -42,6 +43,11 @@ final routerProvider = Provider<GoRouter>(
               path: 'future-provider',
               name: FutureProviderScreen.routeName,
               builder: (context, state) => FutureProviderScreen(),
+            ),
+            GoRoute(
+              path: 'stream-provider',
+              name: StreamProviderScreen.routeName,
+              builder: (context, state) => StreamProviderScreen(),
             ),
           ],
         ),
