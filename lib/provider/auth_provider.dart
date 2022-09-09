@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:riverpod_practice_1/screen/auto_dispose_modifier_screen.dart';
 import 'package:riverpod_practice_1/screen/error_screen.dart';
 import 'package:riverpod_practice_1/screen/family_modifier_screen.dart';
 import 'package:riverpod_practice_1/screen/future_provider_screen.dart';
@@ -54,6 +55,11 @@ final routerProvider = Provider<GoRouter>(
               path: 'family-modifier',
               name: FamilyModifierScreen.routeName,
               builder: (context, state) => FamilyModifierScreen(),
+            ),
+            GoRoute(
+              path: 'auto-dispose-modifier',
+              name: AutoDisposeModifierScreen.routeName,
+              builder: (context, state) => AutoDisposeModifierScreen(),
             ),
           ],
         ),
